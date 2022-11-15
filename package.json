@@ -1,0 +1,46 @@
+{
+  "name": "compound-staking",
+  "version": "1.0.0",
+  "description": "Strategy for leveraged staking through Stakehouse",
+  "main": "index.js",
+  "scripts": {
+    "clean": "npx hardhat clean",
+    "compile": "npx hardhat compile",
+    "build": "yarn clean && yarn compile",
+    "test": "forge test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bswap-eng/compound-staking.git"
+  },
+  "author": "Byzantine Solutions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bswap-eng/compound-staking/issues"
+  },
+  "homepage": "https://github.com/bswap-eng/compound-staking#readme",
+  "dependencies": {
+    "@typechain/ethers-v5": "^10.1.0",
+    "hardhat": "^2.9.1",
+    "@openzeppelin/contracts": "^4.4.2"
+  },
+  "devDependencies": {
+    "@blockswaplab/stakehouse-contract-interfaces": "^1.0.14",
+    "@blockswaplab/stakehouse-sdk": "^3.0.3",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.2",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.3",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^2.1.4",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/hardhat": "^6.1.2",
+    "chai": "^4.3.6",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.21",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.4",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.24"
+  }
+}

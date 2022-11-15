@@ -1,0 +1,13 @@
+certoraRun contracts/test/mocks/CompoundStakingBorrowingPoolMock.sol contracts/LinearInterestRateModel.sol \
+    --verify CompoundStakingBorrowingPoolMock:certora/specs/compound_staking_borrowing_pool/compound_staking_borrowing_pool.spec \
+    --link CompoundStakingBorrowingPoolMock:model=LinearInterestRateModel \
+    --settings -smt_hashingScheme=Legacy \
+    --settings -superOptimisticReturnsize=true \
+    --settings -depth=15 \
+    --loop_iter 2 \
+    --optimistic_loop \
+    --msg "Compound Staking Borrowing Pool" \
+    --staging \
+    --send_only \
+    --rule_sanity basic \
+    --packages @blockswaplab=node_modules/@blockswaplab @openzeppelin=node_modules/@openzeppelin
