@@ -4,6 +4,10 @@ A suite of contracts to stake with leverage in the Stakehouse protocol.
 
 Compound staking allows users to create KNOTs on borrowed funds, which enables them to obtain a validator in Stakehouse with as little as ~8 ETH. The user keeps their SLOT after minting the derivatives, while dETH goes towards repaying their debt.
 
+This is a protocol developed by community member: https://github.com/Van0k
+
+Blog: https://blog.blockswap.network/compound-staking-eth-4aef6126bf71
+
 ## Borrowing pool
 
 `CompoundStakingBorrowingPool.sol` implements a contract that sources liquidity for borrowing.
