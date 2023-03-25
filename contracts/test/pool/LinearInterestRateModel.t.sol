@@ -61,4 +61,13 @@ contract LinearInterestRateModelTest is DSTest {
             "Interest rate not calculated correctly"
         );
     }
+
+    function test_LIRM_02_constructor_reverts_on_incorrect_params() public {
+
+        evm.expectRevert('Base Rate Ray exceeds Optimal Rate Ray');
+        new LinearInterestRateModel(RAY / 2, RAY / 4, RAY, 8 * RAY / 10);
+
+        evm.expectRevert('Optimal rate Ray exceeds Max Rate Ray');
+        new LinearInterestRateModel(RAY / 4, RAY, RAY / 2, 8 * RAY / 10);
+    }
 }
